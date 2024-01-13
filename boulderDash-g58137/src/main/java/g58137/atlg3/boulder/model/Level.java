@@ -207,7 +207,6 @@ public class Level {
      * @param y a given number.
      * @param x a given number.
      * @param element a given element.
-     * @return
      */
     private void setKiller(int index,int y ,int x,Element element){
         info.setPlayerLife(false);
