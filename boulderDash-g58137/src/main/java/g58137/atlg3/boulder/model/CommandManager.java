@@ -48,5 +48,4 @@ public class CommandManager {
         undoStack.clear();
         redoStack.clear();
     }
-
 }
