@@ -18,7 +18,7 @@ public class Main {
             view.displayDiamonds(facade.getLevel());
             view.displayControls();
             Scanner clavier = new Scanner(System.in);
-            String input = clavier.nextLine();
+            String input = clavier.nextLine().replaceAll("\\s",""); // get the input and remove space
             char move;
             if (!input.isBlank()) {
                 if(input.equals("undo")){
