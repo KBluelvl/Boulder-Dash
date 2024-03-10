@@ -78,6 +78,9 @@ public class BoulderViewFX extends Application implements Observer {
                         if(!facade.getLevel().canCross(Direction.UP)) {
                             menu.displayCantMove();
                         } else {
+                            if(facade.getLevel().isDiamond(Direction.UP)){
+                                music.playDiamond();
+                            }
                             facade.movePlayer(Direction.UP);
                             music.playDash();
                         }
@@ -85,6 +88,9 @@ public class BoulderViewFX extends Application implements Observer {
                         if(!facade.getLevel().canCross(Direction.DOWN)) {
                             menu.displayCantMove();
                         } else {
+                            if(facade.getLevel().isDiamond(Direction.DOWN)){
+                                music.playDiamond();
+                            }
                             facade.movePlayer(Direction.DOWN);
                             music.playDash();
                         }
@@ -92,6 +98,9 @@ public class BoulderViewFX extends Application implements Observer {
                         if(!facade.getLevel().canCross(Direction.LEFT)) {
                             menu.displayCantMove();
                         } else {
+                            if(facade.getLevel().isDiamond(Direction.LEFT)){
+                                music.playDiamond();
+                            }
                             facade.movePlayer(Direction.LEFT);
                             music.playDash();
                         }
@@ -99,6 +108,9 @@ public class BoulderViewFX extends Application implements Observer {
                         if(!facade.getLevel().canCross(Direction.RIGHT)) {
                             menu.displayCantMove();
                         } else {
+                            if(facade.getLevel().isDiamond(Direction.RIGHT)){
+                                music.playDiamond();
+                            }
                             facade.movePlayer(Direction.RIGHT);
                             music.playDash();
                         }

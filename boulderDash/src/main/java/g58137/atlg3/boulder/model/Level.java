@@ -272,6 +272,22 @@ public class Level {
     }
 
     /**
+     * Tells if the player gets a diamond.
+     * @return a boolean.
+     */
+    public boolean isDiamond(Direction direction){
+        int x = info.getPlayerX();
+        int y = info.getPlayerY();
+        switch (direction){
+            case UP -> y+=1;
+            case DOWN -> y-=1;
+            case LEFT -> x-=1;
+            case RIGHT -> x+=1;
+        }
+        return info.getElements()[y][x] instanceof Diamond;
+    }
+
+    /**
      * Show if the player has enough diamonds to finish the level.
      * @return a boolean.
      */
